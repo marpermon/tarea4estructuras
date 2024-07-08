@@ -1,7 +1,6 @@
 from optparse import OptionParser
 import gzip
 from cache import *
-from tqdm import tqdm
 
 parser = OptionParser()
 parser.add_option("-s", dest="cache_capacity")
@@ -16,7 +15,7 @@ cache = cache(options.cache_capacity, options.cache_assoc, options.block_size, o
 cache.print_info()
 i = 0 #SOLO PARA DEBUG
 with gzip.open(options.TRACE_FILE,'rt') as trace_fh:
-    for line in tqdm(trace_fh):
+    for line in trace_fh:
         line = line.rstrip()
         access_type, hex_str_address  = line.split(" ")
         address = int(hex_str_address, 16)
