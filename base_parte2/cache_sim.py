@@ -57,11 +57,14 @@ with gzip.open(options.TRACE_FILE, 'rt') as trace_fh:
                 l1_cache.access(access_type, address)
 
 # Imprimir estadísticas
-print("Estadísticas de la caché L1:")
+print("Estadísticas y parámetros de la caché L1:")
 l1_cache.print_stats()
+l1_cache.print_info()
 if l2_cache:
-    print("\nEstadísticas de la caché L2:")
+    print("\nEstadísticas y parámetros de la caché L2:")
     l2_cache.print_stats()
+    l2_cache.print_info()    
 if l3_cache:
-    print("\nEstadísticas de la caché L3:")
+    print("\nEstadísticas y parámetros de la caché L3:")
     l3_cache.print_stats()
+    l3_cache.print_info()
