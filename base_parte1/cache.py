@@ -26,7 +26,7 @@ class cache:
         miss_rate = (100.0*self.total_misses) / self.total_access
         miss_rate = "{:.3f}".format(miss_rate)
         # se deberá imprimir la siguiente información en una sóla línea, separada por espacios
-        result_str = str(self.total_misses)+" "+miss_rate+"%"
+        result_str = "Misses:" + str(self.total_misses)+" Miss rate:"+miss_rate+"%"
         print(result_str)
 
     def access(self, access_type, address):
