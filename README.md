@@ -3,7 +3,7 @@
 ### Universidad de Costa Rica
 En esta tarea se desarrolló la simulación de las distintas configuraciones del caché, utilizando traces que contienen información de una gran cantidad de accesos a memoria, con el fin de medir su rendimiento, y luego se realizan gráficas para lograr observar mejor los resultados de estas simulaciones, este trabajo se dividió en dos partes:
 
-# 1. Parte 1:
+# 1. Parte 1
 Dentro de la carpeta "base_parte1" se encuentra la simulación de un caché con un solo nivel, para su ejecución se debe ejecutar el siguiente comando: 
 ```bash
 python cache_cache.py -s <cache_capacity> -a <cache_assoc> -b <block_size> -r <repl_policy> -t <TRACE_FILE>
